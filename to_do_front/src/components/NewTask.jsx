@@ -52,8 +52,8 @@ function NewTaskModal(props) {
             </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={()=>[props.onHide(), createTask()]}>Create</Button>
-        <Button onClick={props.onHide}>Cancel</Button>
+        <Button variant='success' onClick={()=>[props.onHide(), createTask()]}>Create</Button>
+        <Button  onClick={props.onHide}>Cancel</Button>
       </Modal.Footer>
     </Modal>
   );

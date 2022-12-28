@@ -16,7 +16,7 @@ const AppNav =({user})=>{
     return (
         <Navbar bg="light" expand="lg">
           <Container>
-            <Navbar.Brand href="">My Tasks</Navbar.Brand>
+            <Navbar.Brand href="/">My Tasks</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               

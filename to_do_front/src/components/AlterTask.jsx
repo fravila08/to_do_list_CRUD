@@ -86,13 +86,13 @@ function AlterTaskModal(props) {
         }
         {alter ?
         <Modal.Footer>
-            <Button onClick={()=>{setAlter(false)}}>Edit</Button>
+            <Button variant='warning' onClick={()=>{setAlter(false)}}>Edit</Button>
             <Button onClick={props.onHide}>Close</Button>
         </Modal.Footer>
         :
         <Modal.Footer>
-            <Button onClick={()=>[alterTask(task.id),setAlter(true), props.onHide()]}>Confirm Edit</Button>
-            <Button onClick={()=>setAlter(true)}>Cancel</Button>
+            <Button variant='success' onClick={()=>[alterTask(task.id),setAlter(true), props.onHide()]}>Confirm Edit</Button>
+            <Button variant='danger' onClick={()=>setAlter(true)}>Cancel</Button>
         </Modal.Footer>
         }
     </Modal>

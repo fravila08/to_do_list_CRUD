@@ -27,7 +27,7 @@ const MyTasks = ({user})=>{
     const deleteTask= async(id)=>{
         let response = await axios.delete(`task/${id}`)
         if(response.data.task_deleted){
-            await getMyTask()
+            getMyTask()
         }  
     }
 
@@ -37,14 +37,16 @@ const MyTasks = ({user})=>{
         setAlterShow(true)
     }
 
-    useEffect(async()=>{
+    useEffect(()=>{
         getMyTask()
     },[])
     
 
     return(
-        <div>
-            {user !== undefined ?
+        <div style={{display:'flex', flexDirection:'column', justifyContent:'center', alignItems:'center'}}>
+            <br/>
+            <br/>
+            {user ?
             <Button style={{width:'95vw'}} onClick={() => setModalShow(true)}>Create a Task</Button>
             :
             <h3>You must <a href="/#/signin">Sign In</a> to see your task</h3>
@@ -69,11 +71,11 @@ const MyTasks = ({user})=>{
                             {task.title} 
                         </Col>
                         <Col style={{borderLeft:'solid 5px black', display:'flex', justifyContent:'center'}} xs={3}>
-                            <Button onClick={()=>getTask(task.id)}>View/Edit</Button>
+                            <Button variant="outline-primary" onClick={()=>getTask(task.id)}>View/Edit</Button>
                             
                         </Col>
                         <Col style={{borderLeft:'solid 5px black', display:'flex', justifyContent:'center'}} xs={2}>
-                            <Button onClick={()=>deleteTask(task.id)}>Delete</Button>
+                            <Button variant="outline-danger" onClick={()=>deleteTask(task.id)}>Delete</Button>
                         </Col>
                     </Row>
                 ))}

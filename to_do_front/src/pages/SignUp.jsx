@@ -4,6 +4,7 @@ import axios from 'axios'
 import { useState } from 'react';
 
 const SignUp = ()=>{
+    
     const [name, setName]=useState('')
     const [email, setEmail]=useState('')
     const [password, setPassword]=useState('')
@@ -23,7 +24,7 @@ const SignUp = ()=>{
         }
     }
     return(
-        <Form onSubmit={signUp}>
+        <Form onSubmit={(event)=>signUp(event)}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Full Name</Form.Label>
                 <Form.Control type="text" placeholder="Enter your full name" onChange={(event)=>setName(event.target.value)}/>
@@ -48,4 +49,4 @@ const SignUp = ()=>{
     )
 }
 
-export default SignUp
+export default SignUp;
