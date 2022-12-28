@@ -1,6 +1,9 @@
 
 # To Do List 
 
+https://user-images.githubusercontent.com/105952966/209764267-aa499aa9-22f3-497f-a46b-0db816d76915.mp4
+
+
 This application uses React.js in the front-end, PostgreSQL as a 
 Database, and Django in the Back-end. The To Do List application
 allows for user sign up, sign in, log out functions and allows the
